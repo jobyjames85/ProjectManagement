@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrackerONEDbModelStoreContainer" CdmEntityContainer="TrackerONEDbEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Activity">
+        <MappingFragment StoreEntitySet="Activities">
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ActivityTypeId" ColumnName="ActivityTypeId" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="MilestoneId" ColumnName="MilestoneId" />
+          <ScalarProperty Name="NoteId" ColumnName="NoteId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectTemplateId" ColumnName="ProjectTemplateId" />
+          <ScalarProperty Name="ProjectTemplateMilestoneId" ColumnName="ProjectTemplateMilestoneId" />
+          <ScalarProperty Name="ProjectTemplateTaskId" ColumnName="ProjectTemplateTaskId" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityTypes">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ActivityType">
+        <MappingFragment StoreEntitySet="ActivityTypes">
+          <ScalarProperty Name="ActivityTypeId" ColumnName="ActivityTypeId" />
+          <ScalarProperty Name="ActivityTypeName" ColumnName="ActivityTypeName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Attachment">
+        <MappingFragment StoreEntitySet="Attachments">
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FullFilePath" ColumnName="FullFilePath" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Brand">
+        <MappingFragment StoreEntitySet="Brands">
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChecklistItems">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ChecklistItem">
+        <MappingFragment StoreEntitySet="ChecklistItems">
+          <ScalarProperty Name="ChecklistItemId" ColumnName="ChecklistItemId" />
+          <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ItemIndex" ColumnName="ItemIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Checklists">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Checklist">
+        <MappingFragment StoreEntitySet="Checklists">
+          <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+          <ScalarProperty Name="ChecklistName" ColumnName="ChecklistName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Designation">
+        <MappingFragment StoreEntitySet="Designations">
+          <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImpactedSites">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ImpactedSite">
+        <MappingFragment StoreEntitySet="ImpactedSites">
+          <ScalarProperty Name="ImpactedSiteId" ColumnName="ImpactedSiteId" />
+          <ScalarProperty Name="ImpactedSiteName" ColumnName="ImpactedSiteName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImpactedSpecs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ImpactedSpec">
+        <MappingFragment StoreEntitySet="ImpactedSpecs">
+          <ScalarProperty Name="ImpactedSpecId" ColumnName="ImpactedSpecId" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="ImpactedSpecName" ColumnName="ImpactedSpecName" />
+          <ScalarProperty Name="ImpactedSpecDescription" ColumnName="ImpactedSpecDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogReadActivities">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.LogReadActivity">
+        <MappingFragment StoreEntitySet="LogReadActivities">
+          <ScalarProperty Name="LogReadActivityId" ColumnName="LogReadActivityId" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ReadOn" ColumnName="ReadOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogReadAlerts">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.LogReadAlert">
+        <MappingFragment StoreEntitySet="LogReadAlerts">
+          <ScalarProperty Name="LogReadAlertId" ColumnName="LogReadAlertId" />
+          <ScalarProperty Name="ProjectAlertId" ColumnName="ProjectAlertId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ReadOn" ColumnName="ReadOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManagerComments">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ManagerComment">
+        <MappingFragment StoreEntitySet="ManagerComments">
+          <ScalarProperty Name="ManagerCommentId" ColumnName="ManagerCommentId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialFollowupItems">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.MaterialFollowupItem">
+        <MappingFragment StoreEntitySet="MaterialFollowupItems">
+          <ScalarProperty Name="MaterialFollowupItemId" ColumnName="MaterialFollowupItemId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PMCGovernanceFormId" ColumnName="PMCGovernanceFormId" />
+          <ScalarProperty Name="RmcGovernanceFormId" ColumnName="RmcGovernanceFormId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Milestones">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Milestone">
+        <MappingFragment StoreEntitySet="Milestones">
+          <ScalarProperty Name="MilestoneId" ColumnName="MilestoneId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="MilestoneTitle" ColumnName="MilestoneTitle" />
+          <ScalarProperty Name="MilestoneDescription" ColumnName="MilestoneDescription" />
+          <ScalarProperty Name="MilestoneDate" ColumnName="MilestoneDate" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="EstimatedStartDate" ColumnName="EstimatedStartDate" />
+          <ScalarProperty Name="EstimatedEndDate" ColumnName="EstimatedEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ProjectTemplateId" ColumnName="ProjectTemplateId" />
+          <ScalarProperty Name="ProjectTemplateMilestoneId" ColumnName="ProjectTemplateMilestoneId" />
+          <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+          <ScalarProperty Name="SNo" ColumnName="SNo" />
+          <ScalarProperty Name="LastTaskSNo" ColumnName="LastTaskSNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscellaneousForms">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.MiscellaneousForm">
+        <MappingFragment StoreEntitySet="MiscellaneousForms">
+          <ScalarProperty Name="MiscellaneousFormId" ColumnName="MiscellaneousFormId" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+          <ScalarProperty Name="DateOfTransfer" ColumnName="DateOfTransfer" />
+          <ScalarProperty Name="ImportedTypeId" ColumnName="ImportedTypeId" />
+          <ScalarProperty Name="InventoryCustom1" ColumnName="InventoryCustom1" />
+          <ScalarProperty Name="InventoryCustom2" ColumnName="InventoryCustom2" />
+          <ScalarProperty Name="InventoryCustom3" ColumnName="InventoryCustom3" />
+          <ScalarProperty Name="InventoryCustom4" ColumnName="InventoryCustom4" />
+          <ScalarProperty Name="InventoryCustom5" ColumnName="InventoryCustom5" />
+          <ScalarProperty Name="InventoryDepletionDate" ColumnName="InventoryDepletionDate" />
+          <ScalarProperty Name="InventoryDepletionDateComment" ColumnName="InventoryDepletionDateComment" />
+          <ScalarProperty Name="InventorySecuredComment" ColumnName="InventorySecuredComment" />
+          <ScalarProperty Name="IsInventorySecured" ColumnName="IsInventorySecured" />
+          <ScalarProperty Name="IsQAAssigned" ColumnName="IsQAAssigned" />
+          <ScalarProperty Name="IsRRTAssigned" ColumnName="IsRRTAssigned" />
+          <ScalarProperty Name="IsSOARAssigned" ColumnName="IsSOARAssigned" />
+          <ScalarProperty Name="IsTAAssigned" ColumnName="IsTAAssigned" />
+          <ScalarProperty Name="OriginalNotice" ColumnName="OriginalNotice" />
+          <ScalarProperty Name="OtherChangeTypeComment" ColumnName="OtherChangeTypeComment" />
+          <ScalarProperty Name="PlannedCompletionDate" ColumnName="PlannedCompletionDate" />
+          <ScalarProperty Name="ProjectCustomDate1" ColumnName="ProjectCustomDate1" />
+          <ScalarProperty Name="ProjectCustomDate2" ColumnName="ProjectCustomDate2" />
+          <ScalarProperty Name="ProjectCustomDate3" ColumnName="ProjectCustomDate3" />
+          <ScalarProperty Name="ProjectHeaderCustom1" ColumnName="ProjectHeaderCustom1" />
+          <ScalarProperty Name="ProjectHeaderCustom10" ColumnName="ProjectHeaderCustom10" />
+          <ScalarProperty Name="ProjectHeaderCustom2" ColumnName="ProjectHeaderCustom2" />
+          <ScalarProperty Name="ProjectHeaderCustom3" ColumnName="ProjectHeaderCustom3" />
+          <ScalarProperty Name="ProjectHeaderCustom4" ColumnName="ProjectHeaderCustom4" />
+          <ScalarProperty Name="ProjectHeaderCustom5" ColumnName="ProjectHeaderCustom5" />
+          <ScalarProperty Name="ProjectHeaderCustom6" ColumnName="ProjectHeaderCustom6" />
+          <ScalarProperty Name="ProjectHeaderCustom7" ColumnName="ProjectHeaderCustom7" />
+          <ScalarProperty Name="ProjectHeaderCustom8" ColumnName="ProjectHeaderCustom8" />
+          <ScalarProperty Name="ProjectHeaderCustom9" ColumnName="ProjectHeaderCustom9" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectImpactCustom1" ColumnName="ProjectImpactCustom1" />
+          <ScalarProperty Name="ProjectImpactCustom2" ColumnName="ProjectImpactCustom2" />
+          <ScalarProperty Name="ProjectImpactCustom3" ColumnName="ProjectImpactCustom3" />
+          <ScalarProperty Name="ProjectResourceCustomId1" ColumnName="ProjectResourceCustomId1" />
+          <ScalarProperty Name="ProjectResourceCustomId2" ColumnName="ProjectResourceCustomId2" />
+          <ScalarProperty Name="ProjectResourceCustomId3" ColumnName="ProjectResourceCustomId3" />
+          <ScalarProperty Name="QAId" ColumnName="QAId" />
+          <ScalarProperty Name="RRTEscalatedUserId" ColumnName="RRTEscalatedUserId" />
+          <ScalarProperty Name="RRTId" ColumnName="RRTId" />
+          <ScalarProperty Name="RRTUserDate" ColumnName="RRTUserDate" />
+          <ScalarProperty Name="SOARId" ColumnName="SOARId" />
+          <ScalarProperty Name="TAId" ColumnName="TAId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Note">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="NoteId" ColumnName="NoteId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="IsTaskEdit" ColumnName="IsTaskEdit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMCGovernanceForms">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.PMCGovernanceForm">
+        <MappingFragment StoreEntitySet="PMCGovernanceForms">
+          <ScalarProperty Name="PMCGovernanceFormId" ColumnName="PMCGovernanceFormId" />
+          <ScalarProperty Name="ApprovedSupplierMfgLocation" ColumnName="ApprovedSupplierMfgLocation" />
+          <ScalarProperty Name="AuditRating" ColumnName="AuditRating" />
+          <ScalarProperty Name="Benchmark" ColumnName="Benchmark" />
+          <ScalarProperty Name="ColorCount" ColumnName="ColorCount" />
+          <ScalarProperty Name="CommercializationManager" ColumnName="CommercializationManager" />
+          <ScalarProperty Name="CommodityCategoryAccuracy" ColumnName="CommodityCategoryAccuracy" />
+          <ScalarProperty Name="CommodityCategoryId" ColumnName="CommodityCategoryId" />
+          <ScalarProperty Name="CommodityManagerComments" ColumnName="CommodityManagerComments" />
+          <ScalarProperty Name="Costing" ColumnName="Costing" />
+          <ScalarProperty Name="Deco" ColumnName="Deco" />
+          <ScalarProperty Name="DualSourceBCP" ColumnName="DualSourceBCP" />
+          <ScalarProperty Name="FillSite" ColumnName="FillSite" />
+          <ScalarProperty Name="FinalAnnualQuantities" ColumnName="FinalAnnualQuantities" />
+          <ScalarProperty Name="FinalLaunchQuantities" ColumnName="FinalLaunchQuantities" />
+          <ScalarProperty Name="FinancialRiskRating" ColumnName="FinancialRiskRating" />
+          <ScalarProperty Name="FranchiseId" ColumnName="FranchiseId" />
+          <ScalarProperty Name="GensightNumber" ColumnName="GensightNumber" />
+          <ScalarProperty Name="GovMeetingDate" ColumnName="GovMeetingDate" />
+          <ScalarProperty Name="InitialAnnualForecast" ColumnName="InitialAnnualForecast" />
+          <ScalarProperty Name="InitialLaunchForecast" ColumnName="InitialLaunchForecast" />
+          <ScalarProperty Name="IsApprovedByGovernanceBoard" ColumnName="IsApprovedByGovernanceBoard" />
+          <ScalarProperty Name="IsApprovedBySteeringCommittee" ColumnName="IsApprovedBySteeringCommittee" />
+          <ScalarProperty Name="IsMitigationPlanNeeded" ColumnName="IsMitigationPlanNeeded" />
+          <ScalarProperty Name="IsNewPCAccepted" ColumnName="IsNewPCAccepted" />
+          <ScalarProperty Name="IsNotificationRequired" ColumnName="IsNotificationRequired" />
+          <ScalarProperty Name="IsProprietary" ColumnName="IsProprietary" />
+          <ScalarProperty Name="IsReviewedByGovernanceBoard" ColumnName="IsReviewedByGovernanceBoard" />
+          <ScalarProperty Name="IsReviewedBySteeringCommittee" ColumnName="IsReviewedBySteeringCommittee" />
+          <ScalarProperty Name="ManagerCommentId" ColumnName="ManagerCommentId" />
+          <ScalarProperty Name="MaterialTypeId" ColumnName="MaterialTypeId" />
+          <ScalarProperty Name="MinimumOrderQuantity" ColumnName="MinimumOrderQuantity" />
+          <ScalarProperty Name="NewSupplierLocation" ColumnName="NewSupplierLocation" />
+          <ScalarProperty Name="PackagingEngineer" ColumnName="PackagingEngineer" />
+          <ScalarProperty Name="PCSpecReference" ColumnName="PCSpecReference" />
+          <ScalarProperty Name="PkgEngComments" ColumnName="PkgEngComments" />
+          <ScalarProperty Name="ProcurementComments" ColumnName="ProcurementComments" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectReason" ColumnName="ProjectReason" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="QQRequestTypeId" ColumnName="QQRequestTypeId" />
+          <ScalarProperty Name="QRAStatus" ColumnName="QRAStatus" />
+          <ScalarProperty Name="QualityComments" ColumnName="QualityComments" />
+          <ScalarProperty Name="QualitySupplierSegment" ColumnName="QualitySupplierSegment" />
+          <ScalarProperty Name="RequestedSupplier" ColumnName="RequestedSupplier" />
+          <ScalarProperty Name="Requestor" ColumnName="Requestor" />
+          <ScalarProperty Name="ShipToTradeDate" ColumnName="ShipToTradeDate" />
+          <ScalarProperty Name="SizeCode" ColumnName="SizeCode" />
+          <ScalarProperty Name="SKUDescription" ColumnName="SKUDescription" />
+          <ScalarProperty Name="SourceApprovedSupplier" ColumnName="SourceApprovedSupplier" />
+          <ScalarProperty Name="StandardizationTypeId" ColumnName="StandardizationTypeId" />
+          <ScalarProperty Name="StandardLeadTime" ColumnName="StandardLeadTime" />
+          <ScalarProperty Name="SuggestedMinimumOrderQuantity" ColumnName="SuggestedMinimumOrderQuantity" />
+          <ScalarProperty Name="SupplierLocationStatus" ColumnName="SupplierLocationStatus" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierRiskRating" ColumnName="SupplierRiskRating" />
+          <ScalarProperty Name="SupplierSegment" ColumnName="SupplierSegment" />
+          <ScalarProperty Name="VarnishType" ColumnName="VarnishType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PmcSrcmForms">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.PmcSrcmForm">
+        <MappingFragment StoreEntitySet="PmcSrcmForms">
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="RRTEscalatedUserId" ColumnName="RRTEscalatedUserId" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+          <ScalarProperty Name="AlternateSpec" ColumnName="AlternateSpec" />
+          <ScalarProperty Name="AlternateSupplier" ColumnName="AlternateSupplier" />
+          <ScalarProperty Name="AreSamplesTested" ColumnName="AreSamplesTested" />
+          <ScalarProperty Name="AuditStatusId" ColumnName="AuditStatusId" />
+          <ScalarProperty Name="BatchReception" ColumnName="BatchReception" />
+          <ScalarProperty Name="BatchRequest" ColumnName="BatchRequest" />
+          <ScalarProperty Name="BrandsTypeId" ColumnName="BrandsTypeId" />
+          <ScalarProperty Name="CCCForm" ColumnName="CCCForm" />
+          <ScalarProperty Name="CommodityCategoryId" ColumnName="CommodityCategoryId" />
+          <ScalarProperty Name="CommodityManagerId" ColumnName="CommodityManagerId" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="CurrentSupplier" ColumnName="CurrentSupplier" />
+          <ScalarProperty Name="CycleTime" ColumnName="CycleTime" />
+          <ScalarProperty Name="DateOfTransfer" ColumnName="DateOfTransfer" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="GCCNumber" ColumnName="GCCNumber" />
+          <ScalarProperty Name="InventoryDepletionDate" ColumnName="InventoryDepletionDate" />
+          <ScalarProperty Name="InventoryDepletionDateComment" ColumnName="InventoryDepletionDateComment" />
+          <ScalarProperty Name="InventoryNeededComments" ColumnName="InventoryNeededComments" />
+          <ScalarProperty Name="InventorySecuredComment" ColumnName="InventorySecuredComment" />
+          <ScalarProperty Name="Is65DaysSVPMemoRequested" ColumnName="Is65DaysSVPMemoRequested" />
+          <ScalarProperty Name="IsAlternativePackageNeeded" ColumnName="IsAlternativePackageNeeded" />
+          <ScalarProperty Name="IsCOAorCFCRequested" ColumnName="IsCOAorCFCRequested" />
+          <ScalarProperty Name="IsCommodityManagerAssigned" ColumnName="IsCommodityManagerAssigned" />
+          <ScalarProperty Name="IsDevelopmentalStabilityConducted" ColumnName="IsDevelopmentalStabilityConducted" />
+          <ScalarProperty Name="IsEquivalencyMemoNeeded" ColumnName="IsEquivalencyMemoNeeded" />
+          <ScalarProperty Name="IsInventoryProject" ColumnName="IsInventoryProject" />
+          <ScalarProperty Name="IsLineTrialConducted" ColumnName="IsLineTrialConducted" />
+          <ScalarProperty Name="IsMarketedProductStabilityConducted" ColumnName="IsMarketedProductStabilityConducted" />
+          <ScalarProperty Name="IsOnSiteAuditeRequired" ColumnName="IsOnSiteAuditeRequired" />
+          <ScalarProperty Name="IsPackageAcceptable" ColumnName="IsPackageAcceptable" />
+          <ScalarProperty Name="IsPEAssigned" ColumnName="IsPEAssigned" />
+          <ScalarProperty Name="IsPEGCCApproved" ColumnName="IsPEGCCApproved" />
+          <ScalarProperty Name="IsPEGCCExecuted" ColumnName="IsPEGCCExecuted" />
+          <ScalarProperty Name="IsPEGCCPlanCreated" ColumnName="IsPEGCCPlanCreated" />
+          <ScalarProperty Name="IsPilotBatchingConducted" ColumnName="IsPilotBatchingConducted" />
+          <ScalarProperty Name="IsPMOAssigned" ColumnName="IsPMOAssigned" />
+          <ScalarProperty Name="IsQQRequestRequired" ColumnName="IsQQRequestRequired" />
+          <ScalarProperty Name="IsRRTAssigned" ColumnName="IsRRTAssigned" />
+          <ScalarProperty Name="IsSAPMasterDataUpdated" ColumnName="IsSAPMasterDataUpdated" />
+          <ScalarProperty Name="IsSecureInventory" ColumnName="IsSecureInventory" />
+          <ScalarProperty Name="IsSOARAssigned" ColumnName="IsSOARAssigned" />
+          <ScalarProperty Name="IsSOaRGCCApproved" ColumnName="IsSOaRGCCApproved" />
+          <ScalarProperty Name="IsSOaRGCCExecuted" ColumnName="IsSOaRGCCExecuted" />
+          <ScalarProperty Name="IsSOaRGCCInitiated" ColumnName="IsSOaRGCCInitiated" />
+          <ScalarProperty Name="IsSpecificationUpdated" ColumnName="IsSpecificationUpdated" />
+          <ScalarProperty Name="IsSQAAssigned" ColumnName="IsSQAAssigned" />
+          <ScalarProperty Name="IsSupplierMemoRequested" ColumnName="IsSupplierMemoRequested" />
+          <ScalarProperty Name="IsSVPMemoRequested" ColumnName="IsSVPMemoRequested" />
+          <ScalarProperty Name="IsTechnicalJustificationCreated" ColumnName="IsTechnicalJustificationCreated" />
+          <ScalarProperty Name="IsToxicologyMemoAssessed" ColumnName="IsToxicologyMemoAssessed" />
+          <ScalarProperty Name="IsWatchListProject" ColumnName="IsWatchListProject" />
+          <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+          <ScalarProperty Name="NotificationTypeId" ColumnName="NotificationTypeId" />
+          <ScalarProperty Name="OtherChangeType" ColumnName="OtherChangeType" />
+          <ScalarProperty Name="PCCNumber" ColumnName="PCCNumber" />
+          <ScalarProperty Name="PCsImpacted" ColumnName="PCsImpacted" />
+          <ScalarProperty Name="PELeadId" ColumnName="PELeadId" />
+          <ScalarProperty Name="PlannedCompletionDate" ColumnName="PlannedCompletionDate" />
+          <ScalarProperty Name="PMO" ColumnName="PMO" />
+          <ScalarProperty Name="PMOLeadId" ColumnName="PMOLeadId" />
+          <ScalarProperty Name="PriorityJustification" ColumnName="PriorityJustification" />
+          <ScalarProperty Name="ProjectCustomDate1" ColumnName="ProjectCustomDate1" />
+          <ScalarProperty Name="ProjectCustomDate2" ColumnName="ProjectCustomDate2" />
+          <ScalarProperty Name="ProjectCustomDate3" ColumnName="ProjectCustomDate3" />
+          <ScalarProperty Name="ProjectCustomInventory1" ColumnName="ProjectCustomInventory1" />
+          <ScalarProperty Name="ProjectCustomInventory2" ColumnName="ProjectCustomInventory2" />
+          <ScalarProperty Name="ProjectCustomInventory3" ColumnName="ProjectCustomInventory3" />
+          <ScalarProperty Name="ProjectCustomInventory4" ColumnName="ProjectCustomInventory4" />
+          <ScalarProperty Name="ProjectCustomInventory5" ColumnName="ProjectCustomInventory5" />
+          <ScalarProperty Name="ProjectHeaderChangeTypeId" ColumnName="ProjectHeaderChangeTypeId" />
+          <ScalarProperty Name="ProjectHeaderCustom1" ColumnName="ProjectHeaderCustom1" />
+          <ScalarProperty Name="ProjectHeaderCustom10" ColumnName="ProjectHeaderCustom10" />
+          <ScalarProperty Name="ProjectHeaderCustom2" ColumnName="ProjectHeaderCustom2" />
+          <ScalarProperty Name="ProjectHeaderCustom3" ColumnName="ProjectHeaderCustom3" />
+          <ScalarProperty Name="ProjectHeaderCustom4" ColumnName="ProjectHeaderCustom4" />
+          <ScalarProperty Name="ProjectHeaderCustom5" ColumnName="ProjectHeaderCustom5" />
+          <ScalarProperty Name="ProjectHeaderCustom6" ColumnName="ProjectHeaderCustom6" />
+          <ScalarProperty Name="ProjectHeaderCustom7" ColumnName="ProjectHeaderCustom7" />
+          <ScalarProperty Name="ProjectHeaderCustom8" ColumnName="ProjectHeaderCustom8" />
+          <ScalarProperty Name="ProjectHeaderCustom9" ColumnName="ProjectHeaderCustom9" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectImpactCustom1" ColumnName="ProjectImpactCustom1" />
+          <ScalarProperty Name="ProjectImpactCustom2" ColumnName="ProjectImpactCustom2" />
+          <ScalarProperty Name="ProjectImpactCustom3" ColumnName="ProjectImpactCustom3" />
+          <ScalarProperty Name="ProjectResourceCustomUserId1" ColumnName="ProjectResourceCustomUserId1" />
+          <ScalarProperty Name="ProjectResourceCustomUserId2" ColumnName="ProjectResourceCustomUserId2" />
+          <ScalarProperty Name="ProjectResourceCustomUserId3" ColumnName="ProjectResourceCustomUserId3" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="RRT" ColumnName="RRT" />
+          <ScalarProperty Name="RRTLeadId" ColumnName="RRTLeadId" />
+          <ScalarProperty Name="RRTUserDate" ColumnName="RRTUserDate" />
+          <ScalarProperty Name="SecureInventoryVolume" ColumnName="SecureInventoryVolume" />
+          <ScalarProperty Name="SitesImpactedId" ColumnName="SitesImpactedId" />
+          <ScalarProperty Name="SOaRLeadId" ColumnName="SOaRLeadId" />
+          <ScalarProperty Name="SQALeadId" ColumnName="SQALeadId" />
+          <ScalarProperty Name="SupplierQualitySiteAssessment" ColumnName="SupplierQualitySiteAssessment" />
+          <ScalarProperty Name="WatchListType" ColumnName="WatchListType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectAlerts">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectAlert">
+        <MappingFragment StoreEntitySet="ProjectAlerts">
+          <ScalarProperty Name="ProjectAlertId" ColumnName="ProjectAlertId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBrandMonthWiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectBrandMonthWiseLog">
+        <MappingFragment StoreEntitySet="ProjectBrandMonthWiseLogs">
+          <ScalarProperty Name="ProjectBrandMonthWiseLogID" ColumnName="ProjectBrandMonthWiseLogID" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="ProjectsPMCSRCMMonthwiseLogId" ColumnName="ProjectsPMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectsRMCSRCMMonthwiseLogId" ColumnName="ProjectsRMCSRCMMonthwiseLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectBrands">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectBrand">
+        <MappingFragment StoreEntitySet="ProjectBrands">
+          <ScalarProperty Name="ProjectBrandID" ColumnName="ProjectBrandID" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="MiscellaneousFormId" ColumnName="MiscellaneousFormId" />
+          <ScalarProperty Name="PMCGovernanceFormId" ColumnName="PMCGovernanceFormId" />
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="RmcGovernanceFormId" ColumnName="RmcGovernanceFormId" />
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectChecklistItemValues">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectChecklistItemValue">
+        <MappingFragment StoreEntitySet="ProjectChecklistItemValues">
+          <ScalarProperty Name="ProjectChecklistItemValueId" ColumnName="ProjectChecklistItemValueId" />
+          <ScalarProperty Name="ChecklistItemId" ColumnName="ChecklistItemId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsYes" ColumnName="IsYes" />
+          <ScalarProperty Name="IsNotApplicable" ColumnName="IsNotApplicable" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ItemDate" ColumnName="ItemDate" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectHeaderChangeTypeMonthWiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectHeaderChangeTypeMonthWiseLog">
+        <MappingFragment StoreEntitySet="ProjectHeaderChangeTypeMonthWiseLogs">
+          <ScalarProperty Name="ProjectHeaderChangeTypeMonthWiseLogID" ColumnName="ProjectHeaderChangeTypeMonthWiseLogID" />
+          <ScalarProperty Name="ProjectsPMCSRCMMonthwiseLogId" ColumnName="ProjectsPMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectsRMCSRCMMonthwiseLogId" ColumnName="ProjectsRMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectChangeTypeId" ColumnName="ProjectChangeTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectHeaderChangeTypes">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectHeaderChangeType">
+        <MappingFragment StoreEntitySet="ProjectHeaderChangeTypes">
+          <ScalarProperty Name="ProjectHeaderChangeTypeId" ColumnName="ProjectHeaderChangeTypeId" />
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="MiscellaneousFormId" ColumnName="MiscellaneousFormId" />
+          <ScalarProperty Name="ChangeTypeId" ColumnName="ChangeTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectImpactedSpecMonthWiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectImpactedSpecMonthWiseLog">
+        <MappingFragment StoreEntitySet="ProjectImpactedSpecMonthWiseLogs">
+          <ScalarProperty Name="ProjectImpactedSpecMonthWiseLogID" ColumnName="ProjectImpactedSpecMonthWiseLogID" />
+          <ScalarProperty Name="ProjectsPMCSRCMMonthwiseLogId" ColumnName="ProjectsPMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectsRMCSRCMMonthwiseLogId" ColumnName="ProjectsRMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectImpactedSpecId" ColumnName="ProjectImpactedSpecId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectImpactedSpecs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectImpactedSpec">
+        <MappingFragment StoreEntitySet="ProjectImpactedSpecs">
+          <ScalarProperty Name="ProjectImpactedSpecId" ColumnName="ProjectImpactedSpecId" />
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="ImpactedSpecId" ColumnName="ImpactedSpecId" />
+          <ScalarProperty Name="MiscellaneousFormId" ColumnName="MiscellaneousFormId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectOperationStatus">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectOperationStatu">
+        <MappingFragment StoreEntitySet="ProjectOperationStatus">
+          <ScalarProperty Name="ProjectOperationStatusId" ColumnName="ProjectOperationStatusId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsInMaterialGovernance" ColumnName="IsInMaterialGovernance" />
+          <ScalarProperty Name="IsInMiscellaneousOnly" ColumnName="IsInMiscellaneousOnly" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectPriorities">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectPriority">
+        <MappingFragment StoreEntitySet="ProjectPriorities">
+          <ScalarProperty Name="ProjectPriorityId" ColumnName="ProjectPriorityId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="InProgressDate" ColumnName="InProgressDate" />
+          <ScalarProperty Name="IsDateChangeBlocked" ColumnName="IsDateChangeBlocked" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsMigrated" ColumnName="IsMigrated" />
+          <ScalarProperty Name="IsMilestoneTemplateSpecified" ColumnName="IsMilestoneTemplateSpecified" />
+          <ScalarProperty Name="LastMilestoneSNo" ColumnName="LastMilestoneSNo" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="ProjectCoordinatorId" ColumnName="ProjectCoordinatorId" />
+          <ScalarProperty Name="ProjectDisplayId" ColumnName="ProjectDisplayId" />
+          <ScalarProperty Name="ProjectManagerId" ColumnName="ProjectManagerId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectOperationStatusId" ColumnName="ProjectOperationStatusId" />
+          <ScalarProperty Name="ProjectPriorityId" ColumnName="ProjectPriorityId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="ProjectSummary" ColumnName="ProjectSummary" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="TransferStatus" ColumnName="TransferStatus" />
+          <ScalarProperty Name="TransferStatusMessage" ColumnName="TransferStatusMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectsImpactedSiteMonthWiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectsImpactedSiteMonthWiseLog">
+        <MappingFragment StoreEntitySet="ProjectsImpactedSiteMonthWiseLogs">
+          <ScalarProperty Name="ProjectsImpactedSiteMonthWiseLogID" ColumnName="ProjectsImpactedSiteMonthWiseLogID" />
+          <ScalarProperty Name="ProjectsPMCSRCMMonthwiseLogId" ColumnName="ProjectsPMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectsRMCSRCMMonthwiseLogId" ColumnName="ProjectsRMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectImpactedSiteId" ColumnName="ProjectImpactedSiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectsImpactedSites">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectsImpactedSite">
+        <MappingFragment StoreEntitySet="ProjectsImpactedSites">
+          <ScalarProperty Name="ProjectsImpactedSiteId" ColumnName="ProjectsImpactedSiteId" />
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="ImpactedSiteId" ColumnName="ImpactedSiteId" />
+          <ScalarProperty Name="MiscellaneousFormId" ColumnName="MiscellaneousFormId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectsMonthwiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectsMonthwiseLog">
+        <MappingFragment StoreEntitySet="ProjectsMonthwiseLogs">
+          <ScalarProperty Name="ProjectsMonthwiseLogId" ColumnName="ProjectsMonthwiseLogId" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="CompletedTasksCount" ColumnName="CompletedTasksCount" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IsDateChangeBlocked" ColumnName="IsDateChangeBlocked" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LogDateMonth" ColumnName="LogDateMonth" />
+          <ScalarProperty Name="LogDateYear" ColumnName="LogDateYear" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="ProjectCoordinatorId" ColumnName="ProjectCoordinatorId" />
+          <ScalarProperty Name="ProjectDisplayId" ColumnName="ProjectDisplayId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectManagerId" ColumnName="ProjectManagerId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectOperationStatusId" ColumnName="ProjectOperationStatusId" />
+          <ScalarProperty Name="ProjectPriorityId" ColumnName="ProjectPriorityId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="ProjectSummary" ColumnName="ProjectSummary" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectsPMCSRCMMonthwiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectsPMCSRCMMonthwiseLog">
+        <MappingFragment StoreEntitySet="ProjectsPMCSRCMMonthwiseLogs">
+          <ScalarProperty Name="ProjectsPMCSRCMMonthwiseLogId" ColumnName="ProjectsPMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="RRTEscalatedUserId" ColumnName="RRTEscalatedUserId" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+          <ScalarProperty Name="AlternateSpec" ColumnName="AlternateSpec" />
+          <ScalarProperty Name="AlternateSupplier" ColumnName="AlternateSupplier" />
+          <ScalarProperty Name="AreSamplesTested" ColumnName="AreSamplesTested" />
+          <ScalarProperty Name="AuditStatusId" ColumnName="AuditStatusId" />
+          <ScalarProperty Name="BatchReception" ColumnName="BatchReception" />
+          <ScalarProperty Name="BatchRequest" ColumnName="BatchRequest" />
+          <ScalarProperty Name="BrandsTypeId" ColumnName="BrandsTypeId" />
+          <ScalarProperty Name="CCCForm" ColumnName="CCCForm" />
+          <ScalarProperty Name="CommodityCategoryId" ColumnName="CommodityCategoryId" />
+          <ScalarProperty Name="CommodityManagerId" ColumnName="CommodityManagerId" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="CurrentSupplier" ColumnName="CurrentSupplier" />
+          <ScalarProperty Name="CycleTime" ColumnName="CycleTime" />
+          <ScalarProperty Name="DateOfTransfer" ColumnName="DateOfTransfer" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="GCCNumber" ColumnName="GCCNumber" />
+          <ScalarProperty Name="InventoryDepletionDate" ColumnName="InventoryDepletionDate" />
+          <ScalarProperty Name="InventoryDepletionDateComment" ColumnName="InventoryDepletionDateComment" />
+          <ScalarProperty Name="InventoryNeededComments" ColumnName="InventoryNeededComments" />
+          <ScalarProperty Name="InventorySecuredComment" ColumnName="InventorySecuredComment" />
+          <ScalarProperty Name="Is65DaysSVPMemoRequested" ColumnName="Is65DaysSVPMemoRequested" />
+          <ScalarProperty Name="IsAlternativePackageNeeded" ColumnName="IsAlternativePackageNeeded" />
+          <ScalarProperty Name="IsCOAorCFCRequested" ColumnName="IsCOAorCFCRequested" />
+          <ScalarProperty Name="IsCommodityManagerAssigned" ColumnName="IsCommodityManagerAssigned" />
+          <ScalarProperty Name="IsDevelopmentalStabilityConducted" ColumnName="IsDevelopmentalStabilityConducted" />
+          <ScalarProperty Name="IsEquivalencyMemoNeeded" ColumnName="IsEquivalencyMemoNeeded" />
+          <ScalarProperty Name="IsInventoryProject" ColumnName="IsInventoryProject" />
+          <ScalarProperty Name="IsLineTrialConducted" ColumnName="IsLineTrialConducted" />
+          <ScalarProperty Name="IsMarketedProductStabilityConducted" ColumnName="IsMarketedProductStabilityConducted" />
+          <ScalarProperty Name="IsOnSiteAuditeRequired" ColumnName="IsOnSiteAuditeRequired" />
+          <ScalarProperty Name="IsPackageAcceptable" ColumnName="IsPackageAcceptable" />
+          <ScalarProperty Name="IsPEAssigned" ColumnName="IsPEAssigned" />
+          <ScalarProperty Name="IsPEGCCApproved" ColumnName="IsPEGCCApproved" />
+          <ScalarProperty Name="IsPEGCCExecuted" ColumnName="IsPEGCCExecuted" />
+          <ScalarProperty Name="IsPEGCCPlanCreated" ColumnName="IsPEGCCPlanCreated" />
+          <ScalarProperty Name="IsPilotBatchingConducted" ColumnName="IsPilotBatchingConducted" />
+          <ScalarProperty Name="IsPMOAssigned" ColumnName="IsPMOAssigned" />
+          <ScalarProperty Name="IsQQRequestRequired" ColumnName="IsQQRequestRequired" />
+          <ScalarProperty Name="IsRRTAssigned" ColumnName="IsRRTAssigned" />
+          <ScalarProperty Name="IsSAPMasterDataUpdated" ColumnName="IsSAPMasterDataUpdated" />
+          <ScalarProperty Name="IsSecureInventory" ColumnName="IsSecureInventory" />
+          <ScalarProperty Name="IsSOARAssigned" ColumnName="IsSOARAssigned" />
+          <ScalarProperty Name="IsSOaRGCCApproved" ColumnName="IsSOaRGCCApproved" />
+          <ScalarProperty Name="IsSOaRGCCExecuted" ColumnName="IsSOaRGCCExecuted" />
+          <ScalarProperty Name="IsSOaRGCCInitiated" ColumnName="IsSOaRGCCInitiated" />
+          <ScalarProperty Name="IsSpecificationUpdated" ColumnName="IsSpecificationUpdated" />
+          <ScalarProperty Name="IsSQAAssigned" ColumnName="IsSQAAssigned" />
+          <ScalarProperty Name="IsSupplierMemoRequested" ColumnName="IsSupplierMemoRequested" />
+          <ScalarProperty Name="IsSVPMemoRequested" ColumnName="IsSVPMemoRequested" />
+          <ScalarProperty Name="IsTechnicalJustificationCreated" ColumnName="IsTechnicalJustificationCreated" />
+          <ScalarProperty Name="IsToxicologyMemoAssessed" ColumnName="IsToxicologyMemoAssessed" />
+          <ScalarProperty Name="IsWatchListProject" ColumnName="IsWatchListProject" />
+          <ScalarProperty Name="NotificationDate" ColumnName="NotificationDate" />
+          <ScalarProperty Name="NotificationTypeId" ColumnName="NotificationTypeId" />
+          <ScalarProperty Name="OtherChangeType" ColumnName="OtherChangeType" />
+          <ScalarProperty Name="PCCNumber" ColumnName="PCCNumber" />
+          <ScalarProperty Name="PCsImpacted" ColumnName="PCsImpacted" />
+          <ScalarProperty Name="PELeadId" ColumnName="PELeadId" />
+          <ScalarProperty Name="PlannedCompletionDate" ColumnName="PlannedCompletionDate" />
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="PMO" ColumnName="PMO" />
+          <ScalarProperty Name="PMOLeadId" ColumnName="PMOLeadId" />
+          <ScalarProperty Name="PriorityJustification" ColumnName="PriorityJustification" />
+          <ScalarProperty Name="ProjectCustomDate1" ColumnName="ProjectCustomDate1" />
+          <ScalarProperty Name="ProjectCustomDate2" ColumnName="ProjectCustomDate2" />
+          <ScalarProperty Name="ProjectCustomDate3" ColumnName="ProjectCustomDate3" />
+          <ScalarProperty Name="ProjectCustomInventory1" ColumnName="ProjectCustomInventory1" />
+          <ScalarProperty Name="ProjectCustomInventory2" ColumnName="ProjectCustomInventory2" />
+          <ScalarProperty Name="ProjectCustomInventory3" ColumnName="ProjectCustomInventory3" />
+          <ScalarProperty Name="ProjectCustomInventory4" ColumnName="ProjectCustomInventory4" />
+          <ScalarProperty Name="ProjectCustomInventory5" ColumnName="ProjectCustomInventory5" />
+          <ScalarProperty Name="ProjectHeaderChangeTypeId" ColumnName="ProjectHeaderChangeTypeId" />
+          <ScalarProperty Name="ProjectHeaderCustom1" ColumnName="ProjectHeaderCustom1" />
+          <ScalarProperty Name="ProjectHeaderCustom10" ColumnName="ProjectHeaderCustom10" />
+          <ScalarProperty Name="ProjectHeaderCustom2" ColumnName="ProjectHeaderCustom2" />
+          <ScalarProperty Name="ProjectHeaderCustom3" ColumnName="ProjectHeaderCustom3" />
+          <ScalarProperty Name="ProjectHeaderCustom4" ColumnName="ProjectHeaderCustom4" />
+          <ScalarProperty Name="ProjectHeaderCustom5" ColumnName="ProjectHeaderCustom5" />
+          <ScalarProperty Name="ProjectHeaderCustom6" ColumnName="ProjectHeaderCustom6" />
+          <ScalarProperty Name="ProjectHeaderCustom7" ColumnName="ProjectHeaderCustom7" />
+          <ScalarProperty Name="ProjectHeaderCustom8" ColumnName="ProjectHeaderCustom8" />
+          <ScalarProperty Name="ProjectHeaderCustom9" ColumnName="ProjectHeaderCustom9" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectImpactCustom1" ColumnName="ProjectImpactCustom1" />
+          <ScalarProperty Name="ProjectImpactCustom2" ColumnName="ProjectImpactCustom2" />
+          <ScalarProperty Name="ProjectImpactCustom3" ColumnName="ProjectImpactCustom3" />
+          <ScalarProperty Name="ProjectResourceCustomUserId1" ColumnName="ProjectResourceCustomUserId1" />
+          <ScalarProperty Name="ProjectResourceCustomUserId2" ColumnName="ProjectResourceCustomUserId2" />
+          <ScalarProperty Name="ProjectResourceCustomUserId3" ColumnName="ProjectResourceCustomUserId3" />
+          <ScalarProperty Name="ProjectsMonthwiseLogId" ColumnName="ProjectsMonthwiseLogId" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="RRT" ColumnName="RRT" />
+          <ScalarProperty Name="RRTLeadId" ColumnName="RRTLeadId" />
+          <ScalarProperty Name="RRTUserDate" ColumnName="RRTUserDate" />
+          <ScalarProperty Name="SecureInventoryVolume" ColumnName="SecureInventoryVolume" />
+          <ScalarProperty Name="SitesImpactedId" ColumnName="SitesImpactedId" />
+          <ScalarProperty Name="SOaRLead" ColumnName="SOaRLead" />
+          <ScalarProperty Name="SOaRLeadId" ColumnName="SOaRLeadId" />
+          <ScalarProperty Name="SQALeadId" ColumnName="SQALeadId" />
+          <ScalarProperty Name="SupplierQualitySiteAssessment" ColumnName="SupplierQualitySiteAssessment" />
+          <ScalarProperty Name="WatchListType" ColumnName="WatchListType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectsRMCSRCMMonthwiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectsRMCSRCMMonthwiseLog">
+        <MappingFragment StoreEntitySet="ProjectsRMCSRCMMonthwiseLogs">
+          <ScalarProperty Name="ProjectsRMCSRCMMonthwiseLogId" ColumnName="ProjectsRMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+          <ScalarProperty Name="AlternateSpecs" ColumnName="AlternateSpecs" />
+          <ScalarProperty Name="AlternateSupplier" ColumnName="AlternateSupplier" />
+          <ScalarProperty Name="AnalysisCertificate" ColumnName="AnalysisCertificate" />
+          <ScalarProperty Name="AnalyticalOrStability" ColumnName="AnalyticalOrStability" />
+          <ScalarProperty Name="AuditStatusId" ColumnName="AuditStatusId" />
+          <ScalarProperty Name="CCNumber" ColumnName="CCNumber" />
+          <ScalarProperty Name="ChangeRequestFormRequired" ColumnName="ChangeRequestFormRequired" />
+          <ScalarProperty Name="ClaimSupport" ColumnName="ClaimSupport" />
+          <ScalarProperty Name="ClinicalClearance" ColumnName="ClinicalClearance" />
+          <ScalarProperty Name="CriticalPath" ColumnName="CriticalPath" />
+          <ScalarProperty Name="CriticalPathOwners" ColumnName="CriticalPathOwners" />
+          <ScalarProperty Name="CurrentSupplier" ColumnName="CurrentSupplier" />
+          <ScalarProperty Name="CycleTime" ColumnName="CycleTime" />
+          <ScalarProperty Name="DateOfTransfer" ColumnName="DateOfTransfer" />
+          <ScalarProperty Name="DaysMemoRequest" ColumnName="DaysMemoRequest" />
+          <ScalarProperty Name="DesignControlApproval" ColumnName="DesignControlApproval" />
+          <ScalarProperty Name="DocumentUpdate" ColumnName="DocumentUpdate" />
+          <ScalarProperty Name="EffectiveDateChange" ColumnName="EffectiveDateChange" />
+          <ScalarProperty Name="EnvironmentalEvaluation" ColumnName="EnvironmentalEvaluation" />
+          <ScalarProperty Name="EquivalencyStatement" ColumnName="EquivalencyStatement" />
+          <ScalarProperty Name="GCCNumber" ColumnName="GCCNumber" />
+          <ScalarProperty Name="ImpactedBrandId" ColumnName="ImpactedBrandId" />
+          <ScalarProperty Name="InitialCompletionDate" ColumnName="InitialCompletionDate" />
+          <ScalarProperty Name="InventoryDateDepletion" ColumnName="InventoryDateDepletion" />
+          <ScalarProperty Name="InventoryDepletionDate" ColumnName="InventoryDepletionDate" />
+          <ScalarProperty Name="InventoryDepletionDateComment" ColumnName="InventoryDepletionDateComment" />
+          <ScalarProperty Name="InventorySecuredComment" ColumnName="InventorySecuredComment" />
+          <ScalarProperty Name="InventorySecuredVolume" ColumnName="InventorySecuredVolume" />
+          <ScalarProperty Name="IsInventoryProject" ColumnName="IsInventoryProject" />
+          <ScalarProperty Name="IsOnSiteAuditRequired" ColumnName="IsOnSiteAuditRequired" />
+          <ScalarProperty Name="IsOptivaWorkflowInitiated" ColumnName="IsOptivaWorkflowInitiated" />
+          <ScalarProperty Name="IsQAAssigned" ColumnName="IsQAAssigned" />
+          <ScalarProperty Name="IsQQRequestRequired" ColumnName="IsQQRequestRequired" />
+          <ScalarProperty Name="IsRMQRequested" ColumnName="IsRMQRequested" />
+          <ScalarProperty Name="IsRRTAssigned" ColumnName="IsRRTAssigned" />
+          <ScalarProperty Name="IsSecureInventory" ColumnName="IsSecureInventory" />
+          <ScalarProperty Name="IsSOARAssigned" ColumnName="IsSOARAssigned" />
+          <ScalarProperty Name="IsTAAssigned" ColumnName="IsTAAssigned" />
+          <ScalarProperty Name="IsWatchListItem" ColumnName="IsWatchListItem" />
+          <ScalarProperty Name="LatestCompletionDate" ColumnName="LatestCompletionDate" />
+          <ScalarProperty Name="LatestUpdate" ColumnName="LatestUpdate" />
+          <ScalarProperty Name="LegalReview" ColumnName="LegalReview" />
+          <ScalarProperty Name="MalfunctionListsUpdate" ColumnName="MalfunctionListsUpdate" />
+          <ScalarProperty Name="MicroClearance" ColumnName="MicroClearance" />
+          <ScalarProperty Name="MicroEvaluation" ColumnName="MicroEvaluation" />
+          <ScalarProperty Name="NotificationTypeId" ColumnName="NotificationTypeId" />
+          <ScalarProperty Name="OnSiteAdditionalComments" ColumnName="OnSiteAdditionalComments" />
+          <ScalarProperty Name="OptivaEntryVendorStatus" ColumnName="OptivaEntryVendorStatus" />
+          <ScalarProperty Name="OriginalNoticeDate" ColumnName="OriginalNoticeDate" />
+          <ScalarProperty Name="OtherChangeType" ColumnName="OtherChangeType" />
+          <ScalarProperty Name="PackagingClearance" ColumnName="PackagingClearance" />
+          <ScalarProperty Name="PilotValidation" ColumnName="PilotValidation" />
+          <ScalarProperty Name="PreclinicalClearance" ColumnName="PreclinicalClearance" />
+          <ScalarProperty Name="PriorityJustification" ColumnName="PriorityJustification" />
+          <ScalarProperty Name="ProductAndProcessDevelopment" ColumnName="ProductAndProcessDevelopment" />
+          <ScalarProperty Name="ProjectHeaderChangeTypeId" ColumnName="ProjectHeaderChangeTypeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectResourceCustomUserId1" ColumnName="ProjectResourceCustomUserId1" />
+          <ScalarProperty Name="ProjectResourceCustomUserId2" ColumnName="ProjectResourceCustomUserId2" />
+          <ScalarProperty Name="ProjectResourceCustomUserId3" ColumnName="ProjectResourceCustomUserId3" />
+          <ScalarProperty Name="ProjectsMonthwiseLogId" ColumnName="ProjectsMonthwiseLogId" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="QALead" ColumnName="QALead" />
+          <ScalarProperty Name="QALeadId" ColumnName="QALeadId" />
+          <ScalarProperty Name="QualificationStartedDate" ColumnName="QualificationStartedDate" />
+          <ScalarProperty Name="QualityAssuranceClearance" ColumnName="QualityAssuranceClearance" />
+          <ScalarProperty Name="ReviewofSupplierRiskRating" ColumnName="ReviewofSupplierRiskRating" />
+          <ScalarProperty Name="RightToMarket" ColumnName="RightToMarket" />
+          <ScalarProperty Name="RiskAnalysisOrAssessment" ColumnName="RiskAnalysisOrAssessment" />
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+          <ScalarProperty Name="RRTLeadId" ColumnName="RRTLeadId" />
+          <ScalarProperty Name="RRTLogEscalatedUserId" ColumnName="RRTLogEscalatedUserId" />
+          <ScalarProperty Name="RRTUserDate" ColumnName="RRTUserDate" />
+          <ScalarProperty Name="SAPMasterData" ColumnName="SAPMasterData" />
+          <ScalarProperty Name="SitesImpactedId" ColumnName="SitesImpactedId" />
+          <ScalarProperty Name="SOaRLead" ColumnName="SOaRLead" />
+          <ScalarProperty Name="SOaRLeadId" ColumnName="SOaRLeadId" />
+          <ScalarProperty Name="SpecificationChange" ColumnName="SpecificationChange" />
+          <ScalarProperty Name="SpecificationUpdates" ColumnName="SpecificationUpdates" />
+          <ScalarProperty Name="SpecsImpacted" ColumnName="SpecsImpacted" />
+          <ScalarProperty Name="StabilityTestingDevelopmental" ColumnName="StabilityTestingDevelopmental" />
+          <ScalarProperty Name="StabilityTestingMarketed" ColumnName="StabilityTestingMarketed" />
+          <ScalarProperty Name="SterileProductSelection" ColumnName="SterileProductSelection" />
+          <ScalarProperty Name="SupplierImplementationDate" ColumnName="SupplierImplementationDate" />
+          <ScalarProperty Name="SupplierMemo" ColumnName="SupplierMemo" />
+          <ScalarProperty Name="SVPMemoRequest" ColumnName="SVPMemoRequest" />
+          <ScalarProperty Name="TALeadId" ColumnName="TALeadId" />
+          <ScalarProperty Name="TechnicalAssessment" ColumnName="TechnicalAssessment" />
+          <ScalarProperty Name="TechnicalDossierUpdate" ColumnName="TechnicalDossierUpdate" />
+          <ScalarProperty Name="TechnicalJustification" ColumnName="TechnicalJustification" />
+          <ScalarProperty Name="TechSummary" ColumnName="TechSummary" />
+          <ScalarProperty Name="TestMethodTransferValidation" ColumnName="TestMethodTransferValidation" />
+          <ScalarProperty Name="ToxicologyOrSafetyAssesment" ColumnName="ToxicologyOrSafetyAssesment" />
+          <ScalarProperty Name="UpdateToApprovedSupplierList" ColumnName="UpdateToApprovedSupplierList" />
+          <ScalarProperty Name="WatchListType" ColumnName="WatchListType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectStatus">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectStatu">
+        <MappingFragment StoreEntitySet="ProjectStatus">
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsInMaterialGovernance" ColumnName="IsInMaterialGovernance" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectSupplierMonthWiseLogs">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectSupplierMonthWiseLog">
+        <MappingFragment StoreEntitySet="ProjectSupplierMonthWiseLogs">
+          <ScalarProperty Name="ProjectSupplierMonthWiseLogID" ColumnName="ProjectSupplierMonthWiseLogID" />
+          <ScalarProperty Name="ProjectsPMCSRCMMonthwiseLogId" ColumnName="ProjectsPMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectsRMCSRCMMonthwiseLogId" ColumnName="ProjectsRMCSRCMMonthwiseLogId" />
+          <ScalarProperty Name="ProjectSupplierId" ColumnName="ProjectSupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectSuppliers">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectSupplier">
+        <MappingFragment StoreEntitySet="ProjectSuppliers">
+          <ScalarProperty Name="ProjectSupplierId" ColumnName="ProjectSupplierId" />
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+          <ScalarProperty Name="PmcSrcmFormId" ColumnName="PmcSrcmFormId" />
+          <ScalarProperty Name="RmcGovernanceFormId" ColumnName="RmcGovernanceFormId" />
+          <ScalarProperty Name="PMCGovernanceFormId" ColumnName="PMCGovernanceFormId" />
+          <ScalarProperty Name="MiscellaneousFormId" ColumnName="MiscellaneousFormId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTemplateForms">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectTemplateForm">
+        <MappingFragment StoreEntitySet="ProjectTemplateForms">
+          <ScalarProperty Name="ProjectTemplateFormId" ColumnName="ProjectTemplateFormId" />
+          <ScalarProperty Name="ProjectTemplateId" ColumnName="ProjectTemplateId" />
+          <ScalarProperty Name="HasPMCGovernanceForm" ColumnName="HasPMCGovernanceForm" />
+          <ScalarProperty Name="HasRMCGovernanceForm" ColumnName="HasRMCGovernanceForm" />
+          <ScalarProperty Name="HasPMCSRCMForm" ColumnName="HasPMCSRCMForm" />
+          <ScalarProperty Name="HasRMCSRCMForm" ColumnName="HasRMCSRCMForm" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTemplateMilestones">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectTemplateMilestone">
+        <MappingFragment StoreEntitySet="ProjectTemplateMilestones">
+          <ScalarProperty Name="ProjectTemplateMilestoneId" ColumnName="ProjectTemplateMilestoneId" />
+          <ScalarProperty Name="ProjectTemplateId" ColumnName="ProjectTemplateId" />
+          <ScalarProperty Name="MilestoneId" ColumnName="MilestoneId" />
+          <ScalarProperty Name="MilestoneTitle" ColumnName="MilestoneTitle" />
+          <ScalarProperty Name="MilestoneDescription" ColumnName="MilestoneDescription" />
+          <ScalarProperty Name="MilestoneDate" ColumnName="MilestoneDate" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="EstimatedStartDate" ColumnName="EstimatedStartDate" />
+          <ScalarProperty Name="EstimatedEndDate" ColumnName="EstimatedEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SNo" ColumnName="SNo" />
+          <ScalarProperty Name="LastTaskSNo" ColumnName="LastTaskSNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTemplates">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectTemplate">
+        <MappingFragment StoreEntitySet="ProjectTemplates">
+          <ScalarProperty Name="ProjectTemplateId" ColumnName="ProjectTemplateId" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IsDateChangeBlocked" ColumnName="IsDateChangeBlocked" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastMilestoneSNo" ColumnName="LastMilestoneSNo" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="ProjectCoordinatorId" ColumnName="ProjectCoordinatorId" />
+          <ScalarProperty Name="ProjectManagerId" ColumnName="ProjectManagerId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectOperationStatusId" ColumnName="ProjectOperationStatusId" />
+          <ScalarProperty Name="ProjectPriorityId" ColumnName="ProjectPriorityId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="ProjectSummary" ColumnName="ProjectSummary" />
+          <ScalarProperty Name="ProjectTemplateName" ColumnName="ProjectTemplateName" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="TemplateDescription" ColumnName="TemplateDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTemplateTasks">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectTemplateTask">
+        <MappingFragment StoreEntitySet="ProjectTemplateTasks">
+          <ScalarProperty Name="ProjectTemplateTaskId" ColumnName="ProjectTemplateTaskId" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="FixedCost" ColumnName="FixedCost" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="MilestoneId" ColumnName="MilestoneId" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="ProjectTemplateId" ColumnName="ProjectTemplateId" />
+          <ScalarProperty Name="ProjectTemplateMilestoneId" ColumnName="ProjectTemplateMilestoneId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="TaskDescription" ColumnName="TaskDescription" />
+          <ScalarProperty Name="TaskDisplayId" ColumnName="TaskDisplayId" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="TaskNumber" ColumnName="TaskNumber" />
+          <ScalarProperty Name="TaskStatusId" ColumnName="TaskStatusId" />
+          <ScalarProperty Name="VariableCost" ColumnName="VariableCost" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectTypes">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ProjectType">
+        <MappingFragment StoreEntitySet="ProjectTypes">
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecentProjectInfoes">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.RecentProjectInfo">
+        <MappingFragment StoreEntitySet="RecentProjectInfoes">
+          <ScalarProperty Name="RecentProjectInfoId" ColumnName="RecentProjectInfoId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RecentProjects" ColumnName="RecentProjects" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RmcGovernanceForms">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.RmcGovernanceForm">
+        <MappingFragment StoreEntitySet="RmcGovernanceForms">
+          <ScalarProperty Name="RmcGovernanceFormId" ColumnName="RmcGovernanceFormId" />
+          <ScalarProperty Name="AdditionalInfo" ColumnName="AdditionalInfo" />
+          <ScalarProperty Name="AdditionalProjectType" ColumnName="AdditionalProjectType" />
+          <ScalarProperty Name="AlignmentWithQSP" ColumnName="AlignmentWithQSP" />
+          <ScalarProperty Name="AuditStatus" ColumnName="AuditStatus" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="ConsideredAlternateMaterial" ColumnName="ConsideredAlternateMaterial" />
+          <ScalarProperty Name="DesignTeamId" ColumnName="DesignTeamId" />
+          <ScalarProperty Name="DualSourceOrBCP" ColumnName="DualSourceOrBCP" />
+          <ScalarProperty Name="ExpectedAnnualVolume" ColumnName="ExpectedAnnualVolume" />
+          <ScalarProperty Name="FinancialRiskRating" ColumnName="FinancialRiskRating" />
+          <ScalarProperty Name="GovernaceBoardReviewDate" ColumnName="GovernaceBoardReviewDate" />
+          <ScalarProperty Name="GovernanceBoardApproveDate" ColumnName="GovernanceBoardApproveDate" />
+          <ScalarProperty Name="GovernanceMeetingDate" ColumnName="GovernanceMeetingDate" />
+          <ScalarProperty Name="INCI" ColumnName="INCI" />
+          <ScalarProperty Name="INCITechnicalAssessment" ColumnName="INCITechnicalAssessment" />
+          <ScalarProperty Name="InitialRiskRatingProfile" ColumnName="InitialRiskRatingProfile" />
+          <ScalarProperty Name="IsApprovedByGB" ColumnName="IsApprovedByGB" />
+          <ScalarProperty Name="IsApprovedBySC" ColumnName="IsApprovedBySC" />
+          <ScalarProperty Name="IsFormulaCompendial" ColumnName="IsFormulaCompendial" />
+          <ScalarProperty Name="IsMonographExists" ColumnName="IsMonographExists" />
+          <ScalarProperty Name="IsNewJJSupplier" ColumnName="IsNewJJSupplier" />
+          <ScalarProperty Name="IsNewManufacturingSite" ColumnName="IsNewManufacturingSite" />
+          <ScalarProperty Name="IsNewMaterial" ColumnName="IsNewMaterial" />
+          <ScalarProperty Name="IsNewNASupplier" ColumnName="IsNewNASupplier" />
+          <ScalarProperty Name="IsNewPCAccepted" ColumnName="IsNewPCAccepted" />
+          <ScalarProperty Name="IsNewRMFromExistingSite" ColumnName="IsNewRMFromExistingSite" />
+          <ScalarProperty Name="IsOTCProduct" ColumnName="IsOTCProduct" />
+          <ScalarProperty Name="IsPartOfChassis" ColumnName="IsPartOfChassis" />
+          <ScalarProperty Name="IsProprietary" ColumnName="IsProprietary" />
+          <ScalarProperty Name="IsReviewdBySC" ColumnName="IsReviewdBySC" />
+          <ScalarProperty Name="IsReviewedByGB" ColumnName="IsReviewedByGB" />
+          <ScalarProperty Name="JustificationForMaterialUsage" ColumnName="JustificationForMaterialUsage" />
+          <ScalarProperty Name="ManufacturingLocation" ColumnName="ManufacturingLocation" />
+          <ScalarProperty Name="MaterialGrade" ColumnName="MaterialGrade" />
+          <ScalarProperty Name="MaterialSubstitution" ColumnName="MaterialSubstitution" />
+          <ScalarProperty Name="MicroRiskRating" ColumnName="MicroRiskRating" />
+          <ScalarProperty Name="NeedRiskMigitationPlan" ColumnName="NeedRiskMigitationPlan" />
+          <ScalarProperty Name="OnMarketPeriod" ColumnName="OnMarketPeriod" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="PDPartner" ColumnName="PDPartner" />
+          <ScalarProperty Name="ProductRegulatoryClassification" ColumnName="ProductRegulatoryClassification" />
+          <ScalarProperty Name="ProjectFormulaStatus" ColumnName="ProjectFormulaStatus" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="QRAStatus" ColumnName="QRAStatus" />
+          <ScalarProperty Name="RaMPSAlignment" ColumnName="RaMPSAlignment" />
+          <ScalarProperty Name="RMCategoryId" ColumnName="RMCategoryId" />
+          <ScalarProperty Name="RMMaterialFunction" ColumnName="RMMaterialFunction" />
+          <ScalarProperty Name="RMSpecNumber" ColumnName="RMSpecNumber" />
+          <ScalarProperty Name="SalesRevenue" ColumnName="SalesRevenue" />
+          <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
+          <ScalarProperty Name="ShipToTradeDate" ColumnName="ShipToTradeDate" />
+          <ScalarProperty Name="SpecialStorageConditions" ColumnName="SpecialStorageConditions" />
+          <ScalarProperty Name="SteeringCommitteeApproveDate" ColumnName="SteeringCommitteeApproveDate" />
+          <ScalarProperty Name="SteeringCommitteeReviewDate" ColumnName="SteeringCommitteeReviewDate" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierSegmentation" ColumnName="SupplierSegmentation" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="TradeName" ColumnName="TradeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RmcSrcmForms">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.RmcSrcmForm">
+        <MappingFragment StoreEntitySet="RmcSrcmForms">
+          <ScalarProperty Name="RmcSrcmFormId" ColumnName="RmcSrcmFormId" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+          <ScalarProperty Name="AlternateSpecs" ColumnName="AlternateSpecs" />
+          <ScalarProperty Name="AlternateSupplier" ColumnName="AlternateSupplier" />
+          <ScalarProperty Name="AnalysisCertificate" ColumnName="AnalysisCertificate" />
+          <ScalarProperty Name="AnalyticalOrStability" ColumnName="AnalyticalOrStability" />
+          <ScalarProperty Name="AuditStatusId" ColumnName="AuditStatusId" />
+          <ScalarProperty Name="CCNumber" ColumnName="CCNumber" />
+          <ScalarProperty Name="ChangeRequestFormRequired" ColumnName="ChangeRequestFormRequired" />
+          <ScalarProperty Name="ClaimSupport" ColumnName="ClaimSupport" />
+          <ScalarProperty Name="ClinicalClearance" ColumnName="ClinicalClearance" />
+          <ScalarProperty Name="CriticalPath" ColumnName="CriticalPath" />
+          <ScalarProperty Name="CriticalPathOwners" ColumnName="CriticalPathOwners" />
+          <ScalarProperty Name="CurrentSupplier" ColumnName="CurrentSupplier" />
+          <ScalarProperty Name="CycleTime" ColumnName="CycleTime" />
+          <ScalarProperty Name="DateOfTransfer" ColumnName="DateOfTransfer" />
+          <ScalarProperty Name="DaysMemoRequest" ColumnName="DaysMemoRequest" />
+          <ScalarProperty Name="DesignControlApproval" ColumnName="DesignControlApproval" />
+          <ScalarProperty Name="DocumentUpdate" ColumnName="DocumentUpdate" />
+          <ScalarProperty Name="EffectiveDateChange" ColumnName="EffectiveDateChange" />
+          <ScalarProperty Name="EnvironmentalEvaluation" ColumnName="EnvironmentalEvaluation" />
+          <ScalarProperty Name="EquivalencyStatement" ColumnName="EquivalencyStatement" />
+          <ScalarProperty Name="GCCNumber" ColumnName="GCCNumber" />
+          <ScalarProperty Name="ImpactedBrandId" ColumnName="ImpactedBrandId" />
+          <ScalarProperty Name="InitialCompletionDate" ColumnName="InitialCompletionDate" />
+          <ScalarProperty Name="InventoryDateDepletion" ColumnName="InventoryDateDepletion" />
+          <ScalarProperty Name="InventoryDepletionDate" ColumnName="InventoryDepletionDate" />
+          <ScalarProperty Name="InventoryDepletionDateComment" ColumnName="InventoryDepletionDateComment" />
+          <ScalarProperty Name="InventorySecuredComment" ColumnName="InventorySecuredComment" />
+          <ScalarProperty Name="InventorySecuredVolume" ColumnName="InventorySecuredVolume" />
+          <ScalarProperty Name="IsInventoryProject" ColumnName="IsInventoryProject" />
+          <ScalarProperty Name="IsOnSiteAuditRequired" ColumnName="IsOnSiteAuditRequired" />
+          <ScalarProperty Name="IsOptivaWorkflowInitiated" ColumnName="IsOptivaWorkflowInitiated" />
+          <ScalarProperty Name="IsQAAssigned" ColumnName="IsQAAssigned" />
+          <ScalarProperty Name="IsQQRequestRequired" ColumnName="IsQQRequestRequired" />
+          <ScalarProperty Name="IsRMQRequested" ColumnName="IsRMQRequested" />
+          <ScalarProperty Name="IsRRTAssigned" ColumnName="IsRRTAssigned" />
+          <ScalarProperty Name="IsSecureInventory" ColumnName="IsSecureInventory" />
+          <ScalarProperty Name="IsSOARAssigned" ColumnName="IsSOARAssigned" />
+          <ScalarProperty Name="IsTAAssigned" ColumnName="IsTAAssigned" />
+          <ScalarProperty Name="IsWatchListItem" ColumnName="IsWatchListItem" />
+          <ScalarProperty Name="LatestCompletionDate" ColumnName="LatestCompletionDate" />
+          <ScalarProperty Name="LatestUpdate" ColumnName="LatestUpdate" />
+          <ScalarProperty Name="LegalReview" ColumnName="LegalReview" />
+          <ScalarProperty Name="MalfunctionListsUpdate" ColumnName="MalfunctionListsUpdate" />
+          <ScalarProperty Name="MicroClearance" ColumnName="MicroClearance" />
+          <ScalarProperty Name="MicroEvaluation" ColumnName="MicroEvaluation" />
+          <ScalarProperty Name="NotificationTypeId" ColumnName="NotificationTypeId" />
+          <ScalarProperty Name="OnSiteAdditionalComments" ColumnName="OnSiteAdditionalComments" />
+          <ScalarProperty Name="OptivaEntryVendorStatus" ColumnName="OptivaEntryVendorStatus" />
+          <ScalarProperty Name="OriginalNoticeDate" ColumnName="OriginalNoticeDate" />
+          <ScalarProperty Name="OtherChangeType" ColumnName="OtherChangeType" />
+          <ScalarProperty Name="PackagingClearance" ColumnName="PackagingClearance" />
+          <ScalarProperty Name="PilotValidation" ColumnName="PilotValidation" />
+          <ScalarProperty Name="PreclinicalClearance" ColumnName="PreclinicalClearance" />
+          <ScalarProperty Name="PriorityJustification" ColumnName="PriorityJustification" />
+          <ScalarProperty Name="ProductAndProcessDevelopment" ColumnName="ProductAndProcessDevelopment" />
+          <ScalarProperty Name="ProjectHeaderChangeTypeId" ColumnName="ProjectHeaderChangeTypeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectResourceCustomUserId1" ColumnName="ProjectResourceCustomUserId1" />
+          <ScalarProperty Name="ProjectResourceCustomUserId2" ColumnName="ProjectResourceCustomUserId2" />
+          <ScalarProperty Name="ProjectResourceCustomUserId3" ColumnName="ProjectResourceCustomUserId3" />
+          <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+          <ScalarProperty Name="QALeadId" ColumnName="QALeadId" />
+          <ScalarProperty Name="QualificationStartedDate" ColumnName="QualificationStartedDate" />
+          <ScalarProperty Name="QualityAssuranceClearance" ColumnName="QualityAssuranceClearance" />
+          <ScalarProperty Name="ReviewofSupplierRiskRating" ColumnName="ReviewofSupplierRiskRating" />
+          <ScalarProperty Name="RightToMarket" ColumnName="RightToMarket" />
+          <ScalarProperty Name="RiskAnalysisOrAssessment" ColumnName="RiskAnalysisOrAssessment" />
+          <ScalarProperty Name="RRTLeadId" ColumnName="RRTLeadId" />
+          <ScalarProperty Name="RRTEscalatedUserId" ColumnName="RRTEscalatedUserId" />
+          <ScalarProperty Name="RRTUserDate" ColumnName="RRTUserDate" />
+          <ScalarProperty Name="SAPMasterData" ColumnName="SAPMasterData" />
+          <ScalarProperty Name="SitesImpactedId" ColumnName="SitesImpactedId" />
+          <ScalarProperty Name="SOaRLeadId" ColumnName="SOaRLeadId" />
+          <ScalarProperty Name="SpecificationChange" ColumnName="SpecificationChange" />
+          <ScalarProperty Name="SpecificationUpdates" ColumnName="SpecificationUpdates" />
+          <ScalarProperty Name="SpecsImpacted" ColumnName="SpecsImpacted" />
+          <ScalarProperty Name="StabilityTestingDevelopmental" ColumnName="StabilityTestingDevelopmental" />
+          <ScalarProperty Name="StabilityTestingMarketed" ColumnName="StabilityTestingMarketed" />
+          <ScalarProperty Name="SterileProductSelection" ColumnName="SterileProductSelection" />
+          <ScalarProperty Name="SupplierImplementationDate" ColumnName="SupplierImplementationDate" />
+          <ScalarProperty Name="SupplierMemo" ColumnName="SupplierMemo" />
+          <ScalarProperty Name="SVPMemoRequest" ColumnName="SVPMemoRequest" />
+          <ScalarProperty Name="TALeadId" ColumnName="TALeadId" />
+          <ScalarProperty Name="TechnicalAssessment" ColumnName="TechnicalAssessment" />
+          <ScalarProperty Name="TechnicalDossierUpdate" ColumnName="TechnicalDossierUpdate" />
+          <ScalarProperty Name="TechnicalJustification" ColumnName="TechnicalJustification" />
+          <ScalarProperty Name="TechSummary" ColumnName="TechSummary" />
+          <ScalarProperty Name="TestMethodTransferValidation" ColumnName="TestMethodTransferValidation" />
+          <ScalarProperty Name="ToxicologyOrSafetyAssesment" ColumnName="ToxicologyOrSafetyAssesment" />
+          <ScalarProperty Name="UpdateToApprovedSupplierList" ColumnName="UpdateToApprovedSupplierList" />
+          <ScalarProperty Name="WatchListType" ColumnName="WatchListType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleTitle" ColumnName="RoleTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Task">
+        <MappingFragment StoreEntitySet="Tasks">
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="AreDatesModified" ColumnName="AreDatesModified" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="FixedCost" ColumnName="FixedCost" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="MilestoneId" ColumnName="MilestoneId" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="SNo" ColumnName="SNo" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="TaskDescription" ColumnName="TaskDescription" />
+          <ScalarProperty Name="TaskDisplayId" ColumnName="TaskDisplayId" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="TaskNumber" ColumnName="TaskNumber" />
+          <ScalarProperty Name="TaskStatusId" ColumnName="TaskStatusId" />
+          <ScalarProperty Name="VaribaleCost" ColumnName="VaribaleCost" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskStatus">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.TaskStatu">
+        <MappingFragment StoreEntitySet="TaskStatus">
+          <ScalarProperty Name="TaskStatusId" ColumnName="TaskStatusId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AccountValidFrom" ColumnName="AccountValidFrom" />
+          <ScalarProperty Name="AccountValidTo" ColumnName="AccountValidTo" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="FunctionalGroupId" ColumnName="FunctionalGroupId" />
+          <ScalarProperty Name="IsBlocked" ColumnName="IsBlocked" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsNonSystemUser" ColumnName="IsNonSystemUser" />
+          <ScalarProperty Name="LandPhone" ColumnName="LandPhone" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PhotoFilePath" ColumnName="PhotoFilePath" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSettings">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.UserSetting">
+        <MappingFragment StoreEntitySet="UserSettings">
+          <ScalarProperty Name="UserSettingId" ColumnName="UserSettingId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workstreams">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.Workstream">
+        <MappingFragment StoreEntitySet="Workstreams">
+          <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SampleViews">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.SampleView">
+        <MappingFragment StoreEntitySet="SampleView">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectDisplayId" ColumnName="ProjectDisplayId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewProjectDetails">
+      <EntityTypeMapping TypeName="TrackerONEDbModel.ViewProjectDetail">
+        <MappingFragment StoreEntitySet="ViewProjectDetails">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="InProgressDate" ColumnName="InProgressDate" />
+          <ScalarProperty Name="IsDateChangeBlocked" ColumnName="IsDateChangeBlocked" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsMigrated" ColumnName="IsMigrated" />
+          <ScalarProperty Name="IsMilestoneTemplateSpecified" ColumnName="IsMilestoneTemplateSpecified" />
+          <ScalarProperty Name="LastMilestoneSNo" ColumnName="LastMilestoneSNo" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="PercentComplete" ColumnName="PercentComplete" />
+          <ScalarProperty Name="ProjectCoordinatorId" ColumnName="ProjectCoordinatorId" />
+          <ScalarProperty Name="ProjectDisplayId" ColumnName="ProjectDisplayId" />
+          <ScalarProperty Name="ProjectManagerId" ColumnName="ProjectManagerId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectOperationStatusId" ColumnName="ProjectOperationStatusId" />
+          <ScalarProperty Name="ProjectPriorityId" ColumnName="ProjectPriorityId" />
+          <ScalarProperty Name="ProjectStatusId" ColumnName="ProjectStatusId" />
+          <ScalarProperty Name="ProjectSummary" ColumnName="ProjectSummary" />
+          <ScalarProperty Name="ProjectTypeId" ColumnName="ProjectTypeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="TransferStatus" ColumnName="TransferStatus" />
+          <ScalarProperty Name="TransferStatusMessage" ColumnName="TransferStatusMessage" />
+          <ScalarProperty Name="Coordinator" ColumnName="Coordinator" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+          <ScalarProperty Name="ProjectSuppliers" ColumnName="ProjectSuppliers" />
+          <ScalarProperty Name="OperationStatus" ColumnName="OperationStatus" />
+          <ScalarProperty Name="RRT" ColumnName="RRT" />
+          <ScalarProperty Name="PlannedCompletionDate" ColumnName="PlannedCompletionDate" />
+          <ScalarProperty Name="ActualCompletionDate" ColumnName="ActualCompletionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProjectTemplateTaskPredecessors" TypeName="TrackerONEDbModel.ProjectTemplateTaskPredecessors" StoreEntitySet="ProjectTemplateTaskPredecessors">
+      <EndProperty Name="ProjectTemplateTasks">
+        <ScalarProperty Name="ProjectTemplateTaskId" ColumnName="PredecessorId" />
+      </EndProperty>
+      <EndProperty Name="ProjectTemplateTasks1">
+        <ScalarProperty Name="ProjectTemplateTaskId" ColumnName="TaskId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaskPredecessors" TypeName="TrackerONEDbModel.TaskPredecessors" StoreEntitySet="TaskPredecessors">
+      <EndProperty Name="Tasks">
+        <ScalarProperty Name="TaskId" ColumnName="PredecessorId" />
+      </EndProperty>
+      <EndProperty Name="Tasks1">
+        <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaskUsers" TypeName="TrackerONEDbModel.TaskUsers" StoreEntitySet="TaskUsers">
+      <EndProperty Name="Tasks">
+        <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserRoles" TypeName="TrackerONEDbModel.UserRoles" StoreEntitySet="UserRoles">
+      <EndProperty Name="Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserWorkstreams" TypeName="TrackerONEDbModel.UserWorkstreams" StoreEntitySet="UserWorkstreams">
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="Workstreams">
+        <ScalarProperty Name="WorkstreamId" ColumnName="WorkstreamId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

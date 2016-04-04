@@ -1,0 +1,382 @@
+﻿@using ProjectManagement.Models
+
+@model List<StaffUserViewModel>
+
+@{
+    Layout = "~/Views/Shared/StaffLayout.cshtml";
+}
+<style>
+    #change_me {
+        position: absolute;
+        top: 100px;
+        left: 400px;
+        font: 24px arial;
+    }
+
+    #move_up #move_down #color #disappear {
+        padding: 5px;
+    }
+</style>
+
+@section HeaderBody
+    {
+    <ul id="myMenu" class="dropdown-menu" role="menu" style="display:none">
+        <li><a tabindex="-1" href="#">Edit Profile</a></li>
+        <li><a tabindex="-1" href="#">View Profile</a></li>
+        <li><a tabindex="-1" href="#">Delete</a></li>
+    </ul>
+}
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            Staff Tables
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+            <div class="dataTable_wrapper">
+
+                @*<div class="col-sm-6">
+                        <div class="dataTables_length" id="dataTables-example_length">
+                            <label>
+                                Show <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select> entries
+                            </label>
+                        </div>
+                    </div>*@
+
+                <label>Search:<input type="search" id="Search" placeholder="Search" aria-controls="dataTables-example"></label>
+                @*<div class="checkbox checkbox-primary">
+                        <input class="styled" type="checkbox" id="RowFilter" value="false" checked>
+                        <label for="RowFilter">
+                            Filter
+                        </label>
+                    </div>*@
+
+                <button type="button" id="AddUser" class="btn-default">@Html.ActionLink("Create Staff", "CreateStaff", "Staff")</button>
+
+                <div class="row">
+                    <div>
+
+                        @*<button id="move_up">Move Up</button>
+                            <button id="move_down">Move Down</button>
+                            <button id="color">Change Color</button>
+                            <button id="disappear">Disappear/Re-appear</button>
+                            <div id="change_me">Make Me Do Stuff!</div>*@
+                        <table id="myTable" class="table table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending" style="width: 220px;">First Name</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 260px;">Last Name</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 238px;">WorkStream</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 192px;">Designation</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 144px;">E-Mail</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 144px;">Mobile</th>
+                                    <th tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 144px;">Blocked</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableRow">
+                                @{Html.RenderPartial("SearchStaffList", Model);}
+                                @* <tr class="gradeA odd" role="row" id="filterRow">
+                                    <td><input type="text" id="Name" /></td>
+                                         <td><input type="text" id="CompanyVersion" /></td>
+                                         <td><input type="text" id="CompanyOS" /></td>
+                                         <td><input type="text" id="CompanySubVersion" /></td>
+                                         <td><input type="text" id="CompanyGrade" /></td>
+                                                                            </tr>*@
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+<!-- /.col-lg-12 -->
+@section Scripts {
+
+    <script>
+        (function ($, window) {
+
+            $.fn.contextMenu = function (settings) {
+
+                return this.each(function () {
+
+                    // Open context menu
+                    $(this).on("contextmenu", function (e) {
+                        // return native menu if pressing control
+                        if (e.ctrlKey) return;
+
+                        //open menu
+                        var $menu = $(settings.menuSelector)
+                            .data("invokedOn", $(e.target))
+                            .show()
+                            .css({
+                                position: "absolute",
+                                left: getMenuPosition(e.clientX, 'width', 'scrollLeft'),
+                                top: getMenuPosition(e.clientY, 'height', 'scrollTop')
+                            })
+                            .off('click')
+                            .on('click', 'a', function (e) {
+                                $menu.hide();
+
+                                var $invokedOn = $menu.data("invokedOn");
+                                var $selectedMenu = $(e.target);
+
+                                settings.menuSelected.call(this, $invokedOn, $selectedMenu);
+                            });
+
+                        return false;
+                    });
+
+                    //make sure menu closes on any click
+                    $('body').click(function () {
+                        $(settings.menuSelector).hide();
+                    });
+                });
+
+                function getMenuPosition(mouse, direction, scrollDir) {
+                    var win = $(window)[direction](),
+                        scroll = $(window)[scrollDir](),
+                        menu = $(settings.menuSelector)[direction](),
+                        position = mouse + scroll;
+
+                    // opening menu would pass the side of the page
+                    if (mouse + menu > win && menu < mouse)
+                        position -= menu;
+
+                    return position;
+                }
+
+            };
+        })(jQuery, window);
+
+        $("#myTable tbody tr").contextMenu({
+            menuSelector: "#myMenu",
+            menuSelected: function (invokedOn, selectedMenu) {
+                var msg = "You selected the menu item '" + selectedMenu.text() +
+                    "' on the value '" + invokedOn.text() + "'";
+                alert(msg);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready((function () {
+
+            //$("Div").on("contextmenu", "table tr", function (e) {
+            //    $contextMenu.css({
+            //        display: "block",
+            //        left: e.pageX,
+            //        top: e.pageY
+            //    });
+
+            //    return false;
+
+            //    var item = e;
+            //    alert(item.attr('id'));
+
+            //});
+
+            //$contextMenu.on("click", "a", function () {
+            //    $contextMenu.hide();
+            //});
+
+            //$('#tableRow').bootstrapTable({
+            //    contextMenu: '#myMenu',
+            //    onContextMenuItem: function (row, $el)
+            //    {
+            //        if ($el.data("item") == "Edit") {
+            //            alert(row.itemid);
+            //        }
+            //    }
+            //});
+
+            //href: '#', target: '_blank'
+
+            //$("#tableRow tr").contextMenu({ menu: 'myMenu' }, function (action, el, pos) {
+            //    alert(
+            //        'Action: ' + action + '\n\n' + $(el).attr('data-id') +
+            //        'Element ID: ' + $(el).attr('id') + '\n\n' +
+            //        'X: ' + pos.x + '  Y: ' + pos.y + ' (relative to element)\n\n' +
+            //        'X: ' + pos.docX + '  Y: ' + pos.docY + ' (relative to document)'
+            //        );
+            //    return false;
+            //});
+
+            // Show menu when a list item is clicked
+            //$("#myList UL LI").contextMenu({
+            //    menu: 'myMenu'
+            //}, function (action, el, pos) {
+            //    alert(
+            //        'Action: ' + action + '\n\n' +
+            //        'Element text: ' + $(el).text() + '\n\n' +
+            //        'X: ' + pos.x + '  Y: ' + pos.y + ' (relative to element)\n\n' +
+            //        'X: ' + pos.docX + '  Y: ' + pos.docY + ' (relative to document)'
+            //        );
+            //});
+
+            //var $contextMenu = $("#contextMenu");
+
+            //$("div").on("contextmenu", "table tr", function (e) {
+            //    $contextMenu.css({
+            //        display: "block",
+            //        left: e.pageX,
+            //        top: e.pageY
+            //    });
+            //    return false;
+            //});
+
+            //$contextMenu.on("click", "a", function () {
+            //    $contextMenu.hide();
+            //});
+
+            $("td checkbox").click(function () {
+                alert("CheckBox checked");
+            });
+
+            $("tbody tr input[type=checkbox]").change(function (e) {
+                var userId = $(this).val();
+                var blockvalue = $(this).is(":checked");
+
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("IsUserBlock", "Staff")',
+                    dataType: "bool",
+                    contentType: "application/json",
+                    data: JSON.stringify({ UserId: userId, IsBlock: blockvalue }),
+
+                    success: function (data) {
+                        if (data.returnvalue == true)
+                        { alert("Changed Successfully"); }
+                        else { alert("bad"); }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert(jqXHR.responseText);
+                    }
+                });
+
+            });
+
+            $('#Search').on("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    alert("Enter pressed");
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("SearchStaffList", "Staff")',
+                        // data: '{ "Search":"' + $("#Search").val() + '","inputQuery":"' + $("#txtInputQuery").val() + '" }',
+                        contentType: "application/json",
+                        data: JSON.stringify({ "name": $(this).val() }),
+                        success: function (data) {
+                            debugger;
+                            $("#mt tbody").html(data);
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            debugger;
+                            alert(jqXHR.responseText);
+                        }
+                    });
+
+                    return false;
+                }
+            });
+
+            @*$("#move_up").click(function () {
+                $("#change_me").animate({ top: 30 }, 200);
+            });//end move_up
+
+            $("#move_down").click(function () {
+                $("#change_me").animate({ top: 500 }, 2000);
+            });//end move_down
+
+            $("#color").click(function () {
+                $("#change_me").css("color", "purple");
+            });//end color
+
+            $("#disappear").click(function () {
+                //$("#change_me").toggle("slow");
+                $("#change_me").delay(1000).fadeOut();
+            });//end disappear
+
+            $("#AddUser").click(function (e) {
+                e.preventDefault();
+                window.location.href = "@Url.Action("CreateStaff", "Staff")"
+            });
+
+            $("#RowFilter").change(function (e) {
+                e.preventDefault();
+
+                var ischecked = $(this).is(':checked');
+
+                if (!ischecked) {
+                    $("#filterRow").hide();
+                } else {
+                    $("#filterRow").show();
+                }
+            });*@
+
+            //$('#dataTables-example tbody').on('click', 'tr', function () {
+            //    if ($(this).hasClass('selected')) {
+            //        $(this).removeClass('selected');
+            //    }
+            //    else {
+            //        $('#dataTables-example tr.selected').removeClass('selected');
+            //        $(this).addClass('selected');
+            //    }
+            //});
+
+            @*$("#dataTables-example tr").click(function () {
+                $(this).toggleClass("selected");
+            })
+
+            $('#Search').on("keypress", function (e)
+            {
+                if (e.keyCode == 13)
+                   {
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("SearchStaffList", "Staff")',
+                        //dataType: 'json',
+
+                        // data: '{ "Search":"' + $("#Search").val() + '","inputQuery":"' + $("#txtInputQuery").val() + '" }',
+                        contentType: "application/json",
+                        data: JSON.stringify({ "name": $(this).val() }),
+                        //contentType: 'application/json',
+                        success: function (data)
+                        {
+                            $("#dataTables-example tbody").html(data);
+                        },
+                        error: function (jqXHR, textStatus, errorThrown)
+                        {
+                            alert(jqXHR.responseText);
+                        }
+                    });
+
+                    //alert("Enter pressed");
+                    return false;
+                }
+            });
+        });
+
+        function getSlectedItems() {
+            var selected = [];
+            $("#dataTables-example tr.selected").each(function () {
+                var id = $(this).data("id");
+                selected.push(id);
+            });
+
+            return selected;
+        }*@
+
+            window.currentModulename = "Staff";
+        }));
+    </script>
+}

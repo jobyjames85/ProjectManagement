@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4115B80-9D46-47D5-B3C4-B956A1F45BCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectData</RootNamespace>
+    <AssemblyName>ProjectData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityType.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Attachment.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Brand.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Checklist.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChecklistItem.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Designation.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImpactedSite.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImpactedSpec.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JJContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JJContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JJContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JJContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JJContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LogReadActivity.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogReadAlert.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerComment.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialFollowupItem.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Milestone.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MiscellaneousForm.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Note.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMCGovernanceForm.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PmcSrcmForm.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectAlert.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectBrand.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectBrandMonthWiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectChecklistItemValue.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectHeaderChangeType.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectHeaderChangeTypeMonthWiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectImpactedSpec.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectImpactedSpecMonthWiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectOperationStatu.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectPriority.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsImpactedSite.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsImpactedSiteMonthWiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsMonthwiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsPMCSRCMMonthwiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsRMCSRCMMonthwiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectStatu.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSupplier.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSupplierMonthWiseLog.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTemplate.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTemplateForm.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTemplateMilestone.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTemplateTask.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectType.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecentProjectInfo.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RmcGovernanceForm.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RmcSrcmForm.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SampleView.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskStatu.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserSetting.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProjectDetail.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Workstream.cs">
+      <DependentUpon>JJContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="JJContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JJContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="JJContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JJContext.edmx</DependentUpon>
+      <LastGenOutput>JJContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="JJContext.edmx.diagram">
+      <DependentUpon>JJContext.edmx</DependentUpon>
+    </None>
+    <None Include="JJContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JJContext.edmx</DependentUpon>
+      <LastGenOutput>JJContext.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

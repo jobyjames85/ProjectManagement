@@ -1,0 +1,67 @@
+﻿@using ProjectManagement.Models
+
+@model StaffLoginViewModel
+
+@{
+    ViewBag.Title = "Staff Login";
+}
+
+<h2 align="Center">@ViewBag.Title.</h2>
+<div class="row">
+    <div class="row">
+        <section id="loginForm">
+            @using (Html.BeginForm("StaffLogin", "Staff", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+            {
+                <hr />
+                <div class="center-block">
+                    @Html.ValidationSummary(false)
+                </div>
+                if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="Div-Message" id="successMessage">
+                       @ViewBag.ErrorMessage
+                    </div>
+                }
+                <div class="Bloc">
+                    @*<input class="login_username input-validation-error" data-val="true" data-val-required="User Name is required." id="Username" name="Username" placeholder="Enter User Name" type="text" value="test">*@
+                    @Html.LabelFor(m => m.UserName, new { @class = "col-sm-2 control-label" })
+                    @Html.TextBoxFor(m => m.UserName)
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                </div>
+                <div class="Bloc">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-sm-2 control-label" })
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="Bloc">
+                    <input type="submit" value="Log in" class="btn btn-default" />
+                </div>
+
+                @*Enable this once you have account confirmation enabled for password reset functionality
+                    <p>
+                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                    </p>*@
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+   
+    <script type="text/javascript">
+   
+   
+        $(function ()
+        {
+            // setTimeout() function will be fired after page is loaded
+            // it will wait for 5 sec. and then will fire
+            // $("#successMessage").hide() function
+            
+                setTimeout(function () { $("#successMessage").hide(); }, 5000);
+            
+        });
+   
+    </script>
+    
+}
+

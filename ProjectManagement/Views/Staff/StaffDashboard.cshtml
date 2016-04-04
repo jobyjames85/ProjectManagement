@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/StaffLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "DashBoard";
+}
+
+<div>
+
+    <div>
+        <p>Test Selected Value</p>
+        <select id="dropDownId">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes" selected>Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <select id="PassDropDownId"></select>
+    </div>
+
+    <div>
+        <img id="testimg" src="" alt="Pineapple" width="300" height="300" />
+    </div>
+</div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('select').change(function () {
+
+                var value = $('#dropDownId').val();
+
+                var exists = $('#PassDropDownId option').filter(function () { return $(this).val() == value; }).length;
+
+                if (!exists) {
+                    var newOption = "<option value='" + value + "'>" + value + "</option>";
+                    $("#PassDropDownId").append(newOption);
+                }
+
+                if (value == "volvo") {
+                    var urlAbsolute = "/images/tooplate_image_05.jpg";
+                    $('#testimg').attr("src", urlAbsolute)
+                }
+                else if (value == "saab") {
+                    var urlAbsolute = "/images/tooplate_image_10.jpg";
+                    $('#testimg').attr("src", urlAbsolute)
+                }
+                else if (value == "mercedes") {
+                    var urlAbsolute = "/images/tooplate_image_11.jpg";
+                    $('#testimg').attr("src", urlAbsolute)
+                }
+                else {
+                    var urlAbsolute = "/images/tooplate_image_12.jpg";
+                    $('#testimg').attr("src", urlAbsolute)
+                }
+
+            });
+
+        });
+    </script>
+}
