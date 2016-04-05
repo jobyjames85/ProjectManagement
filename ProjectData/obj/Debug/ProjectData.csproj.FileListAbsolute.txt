@@ -7,3 +7,4 @@ C:\Users\joby.james\Documents\Visual Studio 2013\Projects\ProjectManagement\Proj
 C:\Users\joby.james\Documents\Visual Studio 2013\Projects\ProjectManagement\ProjectData\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\joby.james\Documents\Visual Studio 2013\Projects\ProjectManagement\ProjectData\obj\Debug\ProjectData.dll
 C:\Users\joby.james\Documents\Visual Studio 2013\Projects\ProjectManagement\ProjectData\obj\Debug\ProjectData.pdb
+C:\Users\joby.james\Documents\Visual Studio 2013\Projects\ProjectManagement\ProjectData\obj\Debug\ProjectData.csprojResolveAssemblyReference.cache

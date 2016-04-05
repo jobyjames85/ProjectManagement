@@ -41,6 +41,7 @@ namespace ProjectManagement.Controllers
         //                                             Text = x.ToString(),
         //                                             Value = ((int)action).ToString()
         //                                         };
+
         [HttpPost]
         public ActionResult CreateStaff(StaffUserViewModel staffModel, HttpPostedFileBase file)
         {
@@ -84,6 +85,16 @@ namespace ProjectManagement.Controllers
                 ViewBag.ErrorMessage = "Invalid User";
                 return View(staffModel);
             }
+        }
+
+        [HttpPost]
+        public ActionResult DeleteStaff(int UserId)
+        {
+            TrackerONEDbEntities objcontext = new TrackerONEDbEntities();
+            var user = objcontext.Users.Where(p => p.UserId == UserId).FirstOrDefault();
+            objcontext.Users.Remove(user);
+            var saveresult = objcontext.SaveChanges();
+            return Json(new { returnvalue = saveresult });
         }
 
         [HttpPost]

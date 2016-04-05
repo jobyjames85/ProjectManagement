@@ -21,9 +21,9 @@
 @section HeaderBody
     {
     <ul id="myMenu" class="dropdown-menu" role="menu" style="display:none">
-        <li><a tabindex="-1" href="#">Edit Profile</a></li>
-        <li><a tabindex="-1" href="#">View Profile</a></li>
-        <li><a tabindex="-1" href="#">Delete</a></li>
+        <li data-item="Edit"><a data-content="Edit" tabindex="-1" href="#">Edit Profile</a></li>
+        <li data-item="View"><a data-content="View" tabindex="-1" href="#">View Profile</a></li>
+        <li data-item="Delete"><a data-content="Delete" tabindex="-1" href="#">Delete</a></li>
     </ul>
 }
 
@@ -161,10 +161,69 @@
         $("#myTable tbody tr").contextMenu({
             menuSelector: "#myMenu",
             menuSelected: function (invokedOn, selectedMenu) {
-                var msg = "You selected the menu item '" + selectedMenu.text() +
-                    "' on the value '" + invokedOn.text() + "'";
-                alert(msg);
+                var msg = "You selected the menu item '" + selectedMenu.text() + " " + $(invokedOn).closest('tr').attr('data-id') +
+                  "' on the value '" + invokedOn.text() + "'";
+
+                if (selectedMenu.data('content') == "Edit") {
+
+                }
+                else if (selectedMenu.data('content') == "View") {
+
+                }
+                else if (selectedMenu.data('content') == "Delete") {
+                    var userId = $(invokedOn).closest('tr').attr('data-id');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("DeleteStaff", "Staff")',
+                        dataType: "bool",
+                        contentType: "application/json",
+                        data: JSON.stringify({ UserId: userId }),
+
+                        success: function (data) {
+                            if (data.returnvalue == true) {
+                                alert("Deleted Successfully");
+                            }
+                            else {
+                                alert("bad");
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert(jqXHR.responseText);
+                        }
+                    });
+
+                    $(invokedOn).closest('tr').remove();
+                }
+                else {
+                    alert(msg);
+                }
+
             }
+        });
+
+        $("#myTable tr").click(function () {
+
+            //var selected = $(this).hasClass("highlight");
+            //$("#myTable tr").removeClass("highlight");
+            //if (!selected)
+            //    $(this).addClass("highlight");
+
+            $('#myTable tr').removeClass('highlighted');
+            $(this).toggleClass('highlighted');
+
+        });
+
+        $("#myTable tr").mousedown(function () {
+
+            //var selected = $(this).hasClass("highlight");
+            //$("#myTable tr").removeClass("highlight");
+            //if (!selected)
+            //    $(this).addClass("highlight");
+
+            $('#myTable tr').removeClass('highlighted');
+            $(this).toggleClass('highlighted');
+
         });
     </script>
 
